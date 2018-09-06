@@ -1,0 +1,188 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*/
+
+@import 'bootstrap';
+
+body, html {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  margin-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-block {
+  font-size: 20px;
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-buttons {
+  border-top: 1px solid rgba(160, 175, 186, 0.4);
+  padding-top: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-link {
+  color: rgba(160, 175, 186, 1.0);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+}
+
+.main {
+  height: 95%;
+  display: flex;
+  border-bottom: 1px solid rgba(160, 175, 186, 0.4);
+}
+
+.left-main {
+  background-color: rgba(68, 82, 0, 1.0);
+  background: url("welcome_road.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-main-text {
+  font-size: 72px;
+  text-shadow: 2px 2px rgba(68, 82, 0, 1.0);
+}
+
+.left-main-line {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  padding-right: 35px;
+}
+
+.follow-your-interests {
+  display: flex;
+}
+
+.hear-what-people-are-talking-about {
+  display: flex;
+}
+
+.join-the-conversation {
+  display: flex;
+}
+
+.right-main {
+  width: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-main-header {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-main-icon {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-main-subheader {
+  margin-top: 25px;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-account-button {
+  width: 400px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: rgba(134,175,73, 1.0);
+  border: solid 1px rgba(134,175,73, 1.0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in-button {
+  color: rgba(134,175,73, 1.0);
+  margin-top: 25px;
+  width: 400px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: white;
+  border: solid 1px rgba(134,175,73, 1.0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#right-subheader {
+  font-size: 36px;
+}
+
+#join-roadtripper {
+  margin-top: 50px;
+  width: 75%;
+  display: flex;
+}
+
+#road-icon {
+  color: rgba(134,175,73, 1.0);
+  font-size: 48px;
+}
+
+#activities-line {
+  margin-left: 35px;
+}
+
+#weather-line {
+  margin-left: 8px;
+}
+
+#lodging-line {
+  margin-right: 5px;
+}
