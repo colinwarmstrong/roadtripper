@@ -160,6 +160,150 @@ footer {
   align-items: center;
 }
 
+.global-nav {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
+  background-color: rgba(255, 255, 255, 1.0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-container {
+  height: 100%;
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-photo {
+  height: 100%;
+}
+
+.nav-icon {
+  height: 36px;
+}
+
+.nav-photo {
+  height: 36px;
+  border-radius: 50px;
+}
+
+.nav-logo {
+  height: 36px;
+  border-radius: 5px;
+}
+
+.logout-button {
+  font-size: 13px;
+  height: 36px;
+  width: 75px;
+  margin-left: 18px;
+  border-radius: 25px;
+  background-color: rgba(134, 175, 73, 1.0);
+  border: solid 1px rgba(134, 175, 73, 1.0);
+}
+
+.dashboard-header {
+  background-color: rgba(68, 82, 0, 1.0);
+  background: url("dashboard_header2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sub-nav {
+  height: 60px;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
+  background-color: rgba(255, 255, 255, 1.0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.trip-count {
+  color: rgb(99, 113, 127);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trip-count-title {
+  font-size: 14px;
+}
+
+.trip-count-number {
+  font-size: 20px;
+}
+
+.edit-profile-button {
+  color: rgba(134, 175, 73, 1.0);
+  margin-top: 5px;
+  width: 120px;
+  height: 38px;
+  border-radius: 25px;
+  background-color: white;
+  border: solid 1px rgba(134, 175, 73, 1.0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  height: 200px;
+  width: 200px;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  margin-top: -110px;
+}
+
+.dashboard-main {
+  height: 100%;
+  background-color: rgba(231, 236, 240, 1.0);
+}
+
+.user-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.user-email {
+  font-size: 14px;
+  color: rgb(115, 130, 143);
+}
+
+.user-location {
+  font-size: 14px;
+  color: rgb(115, 130, 143);
+}
+
+.user-joined {
+  font-size: 14px;
+  color: rgb(115, 130, 143);
+}
+
+.email-icon {
+  margin-right: 9px;
+}
+
+.location-icon {
+  margin-right: 12px;
+}
+
+.calendar-icon {
+  margin-right: 10px;
+}
+
 #right-subheader {
   font-size: 36px;
 }

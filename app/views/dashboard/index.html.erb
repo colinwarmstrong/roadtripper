@@ -1,5 +1,38 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <img src="/assets/images/roadtripper_logo.png" %>
+<nav class="navbar navbar-expand-lg navbar-light global-nav">
+  <div class="nav-container">
+    <div class="nav-logo"><%= image_tag("roadtripper_logo", class: "nav-photo nav-logo")%></div>
+  </div>
+  <div class="nav-container">
+    <div class="nav-icon"><%= image_tag("road_icon", class: "nav-photo") %></div>
+  </div>
+  <div class="nav-container">
+    <div class="nav-photo"><%= image_tag(current_user.photo, class: "nav-photo") %></div>
+    <div><%= button_to "Logout", logout_path, method: :delete, class: "btn btn-success logout-button" %></div>
   </div>
 </nav>
+
+<section class="dashboard-header">
+  <div></div>
+</section>
+
+<nav class="navbar navbar-expand-lg navbar-light sub-nav">
+  <div class="nav-container">
+    <div class="profile-section">
+      <div><%= image_tag(current_user.photo, class: "nav-photo profile-pic")%></div>
+      <div class="user-name"><%= current_user.first_name %> <%= current_user.last_name %></div>
+      <div class='user-email'><i class="fas fa-envelope email-icon"></i><%= current_user.email %></div>
+      <div class='user-location'><i class="fas fa-map-marker-alt location-icon"></i>Denver, CO</div>
+      <div class='user-joined'><i class="fas fa-calendar-alt calendar-icon"></i>Joined <%= current_user.created_at.strftime("%B %Y") %></div>
+    </div>
+  </div>
+  <div class="nav-container trip-count">
+    <div class="trip-count-title">Trips</div>
+    <div class="trip-count-number">4</div>
+  </div>
+  <div class="nav-container">
+    <%= button_to "Edit Profile", root_path, method: :get, class: "btn btn-light edit-profile-button" %>
+  </div>
+</nav>
+
+<section class="dashboard-main">
+</section>
