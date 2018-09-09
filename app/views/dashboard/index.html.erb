@@ -6,13 +6,12 @@
     <div class="nav-icon"><%= image_tag("road_icon", class: "nav-photo") %></div>
   </div>
   <div class="nav-container">
-    <div class="nav-photo"><%= image_tag(current_user.photo, class: "nav-photo") %></div>
+    <div class="nav-photo"><a href="<%= dashboard_path %>"><%= image_tag(current_user.photo, class: "nav-photo") %></a></div>
     <div><%= button_to "Logout", logout_path, method: :delete, class: "btn btn-success logout-button" %></div>
   </div>
 </nav>
 
 <section class="dashboard-header">
-  <div></div>
 </section>
 
 <nav class="navbar navbar-expand-lg navbar-light sub-nav">
@@ -23,16 +22,137 @@
       <div class='user-email'><i class="fas fa-envelope email-icon"></i><%= current_user.email %></div>
       <div class='user-location'><i class="fas fa-map-marker-alt location-icon"></i>Denver, CO</div>
       <div class='user-joined'><i class="fas fa-calendar-alt calendar-icon"></i>Joined <%= current_user.created_at.strftime("%B %Y") %></div>
+      <div class='user-photos'><i class="fas fa-image photo-icon"></i>22 Photos</div>
+      <div class='photo-grid'>
+        <div><%= image_tag("road_1", class: "grid-photo") %></div>
+        <div><%= image_tag("road_2", class: "grid-photo") %></div>
+        <div><%= image_tag("road_3", class: "grid-photo") %></div>
+        <div><%= image_tag("road_4", class: "grid-photo") %></div>
+        <div><%= image_tag("road_5", class: "grid-photo") %></div>
+        <div><%= image_tag("road_6", class: "grid-photo") %></div>
+      </div>
     </div>
   </div>
-  <div class="nav-container trip-count">
-    <div class="trip-count-title">Trips</div>
-    <div class="trip-count-number">4</div>
+  <div class="nav-container info-bar">
+    <div class="trips-info">
+      <div class="trip-count-title">Trips</div>
+      <div class="trip-count-number">6</div>
+    </div>
+    <div class="distance-info">
+      <div class="trip-count-title">Distance</div>
+      <div class="trip-count-number">5145 mi</div>
+    </div>
+    <div class="cities-info"">
+      <div class="trip-count-title">Cities</div>
+      <div class="trip-count-number">15</div>
+    </div>
+    <div class="buddies-info">
+      <div class="trip-count-title">Buddies</div>
+      <div class="trip-count-number">13</div>
+    </div>
   </div>
   <div class="nav-container">
-    <%= button_to "Edit Profile", root_path, method: :get, class: "btn btn-light edit-profile-button" %>
+    <%= button_to "+ Create New Trip", map_path, method: :get, class: "btn btn-success create-new-trip-button" %>
+    <%= button_to "Edit Profile", root_path, method: :get, class: "btn btn-success edit-profile-button" %>
   </div>
 </nav>
 
 <section class="dashboard-main">
+  <div class='trip-main-first'></div>
+  <div class='trip-main'>
+    <div class='trip-header'>
+      <h4>Cali Bros: A West Coast Adventure</h4>
+    </div>
+    <div class='trip-images-grid'>
+      <div><%= image_tag("california_1", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("california_2", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("california_3", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("california_4", class: "trip-grid-photo") %></div>
+    </div>
+    <div class='trip-stats'>
+      <div><i class="fas fa-calendar-plus trip-stats-icon"></i>6 days</div>
+      <div><i class="fas fa-road trip-stats-icon"></i>890 mi</div>
+      <div><i class="fas fa-users trip-stats-icon"></i>4 buddies</div>
+    </div>
+  </div>
+  <div class='trip-main'>
+    <div class='trip-header'>
+      <h4>Into the Corn: A Midwestern Excursion</h4>
+    </div>
+    <div class='trip-images-grid'>
+      <div><%= image_tag("midwest_3", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("midwest_2", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("midwest_1", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("midwest_4", class: "trip-grid-photo") %></div>
+    </div>
+    <div class='trip-stats'>
+      <div><i class="fas fa-calendar-plus trip-stats-icon"></i>8 days</div>
+      <div><i class="fas fa-road trip-stats-icon"></i>1236 mi</div>
+      <div><i class="fas fa-users trip-stats-icon"></i>2 buddies</div>
+    </div>
+  </div>
+  <div class='trip-main'>
+    <div class='trip-header'>
+      <h4>Gator Boys: A Journey Through Florida</h4>
+    </div>
+    <div class='trip-images-grid'>
+      <div><%= image_tag("florida_1", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("florida_2", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("florida_3", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("florida_4", class: "trip-grid-photo") %></div>
+    </div>
+    <div class='trip-stats'>
+      <div><i class="fas fa-calendar-plus trip-stats-icon"></i>4 days</div>
+      <div><i class="fas fa-road trip-stats-icon"></i>632 mi</div>
+      <div><i class="fas fa-users trip-stats-icon"></i>3 buddies</div>
+    </div>
+  </div>
+  <div class='trip-main'>
+    <div class='trip-header'>
+      <h4>Lobster Fest: A Relaxing Trip to Maine</h4>
+    </div>
+    <div class='trip-images-grid'>
+      <div><%= image_tag("maine_1", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("maine_2", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("maine_3", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("maine_4", class: "trip-grid-photo") %></div>
+    </div>
+    <div class='trip-stats'>
+      <div><i class="fas fa-calendar-plus trip-stats-icon"></i>5 days</div>
+      <div><i class="fas fa-road trip-stats-icon"></i>735 mi</div>
+      <div><i class="fas fa-users trip-stats-icon"></i>2 buddies</div>
+    </div>
+  </div>
+  <div class='trip-main'>
+    <div class='trip-header'>
+      <h4>Sin City: A Weekend in Vegas</h4>
+    </div>
+    <div class='trip-images-grid'>
+      <div><%= image_tag("vegas_1", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("vegas_2", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("vegas_3", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("vegas_4", class: "trip-grid-photo") %></div>
+    </div>
+    <div class='trip-stats'>
+      <div><i class="fas fa-calendar-plus trip-stats-icon"></i>3 days</div>
+      <div><i class="fas fa-road trip-stats-icon"></i>220 mi</div>
+      <div><i class="fas fa-users trip-stats-icon"></i>6 buddies</div>
+    </div>
+  </div>
+  <div class='trip-main'>
+    <div class='trip-header'>
+      <h4>BBQ Boys: The Texas Takeover</h4>
+    </div>
+    <div class='trip-images-grid'>
+      <div><%= image_tag("texas_1", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("texas_2", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("texas_3", class: "trip-grid-photo") %></div>
+      <div><%= image_tag("texas_4", class: "trip-grid-photo") %></div>
+    </div>
+    <div class='trip-stats'>
+      <div><i class="fas fa-calendar-plus trip-stats-icon"></i>9 days</div>
+      <div><i class="fas fa-road trip-stats-icon"></i>1432 mi</div>
+      <div><i class="fas fa-users trip-stats-icon"></i>4 buddies</div>
+    </div>
+  </div>
 </section>

@@ -161,6 +161,7 @@ footer {
 }
 
 .global-nav {
+  z-index: 1;
   height: 50px;
   width: 100%;
   position: relative;
@@ -230,8 +231,35 @@ footer {
   align-items: center;
 }
 
-.trip-count {
+.info-bar {
   color: rgb(99, 113, 127);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.trips-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.distance-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cities-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buddies-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -246,10 +274,25 @@ footer {
   font-size: 20px;
 }
 
+.create-new-trip-button {
+  color: white;
+  margin-top: 4px;
+  margin-right: 30px;
+  width: 160px;
+  height: 38px;
+  border-radius: 25px;
+  background-color: rgba(134, 175, 73, 1.0);
+  border: solid 1px rgba(134, 175, 73, 1.0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .edit-profile-button {
   color: rgba(134, 175, 73, 1.0);
-  margin-top: 5px;
-  width: 120px;
+  margin-top: 4px;
+  margin-right: 30px;
+  width: 160px;
   height: 38px;
   border-radius: 25px;
   background-color: white;
@@ -257,6 +300,10 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.profile-section {
+  margin-left: 50px;
 }
 
 .profile-pic {
@@ -267,29 +314,46 @@ footer {
   margin-top: -110px;
 }
 
-.dashboard-main {
-  height: 100%;
-  background-color: rgba(231, 236, 240, 1.0);
-}
-
 .user-name {
   font-size: 24px;
   font-weight: bold;
 }
 
 .user-email {
-  font-size: 14px;
+  font-size: 15px;
   color: rgb(115, 130, 143);
 }
 
 .user-location {
-  font-size: 14px;
+  font-size: 15px;
   color: rgb(115, 130, 143);
 }
 
 .user-joined {
-  font-size: 14px;
+  font-size: 15px;
   color: rgb(115, 130, 143);
+}
+
+.user-photos {
+  font-size: 15px;
+  color: rgb(115, 130, 143);
+}
+
+.photo-grid {
+  margin-left: -8px;
+  margin-top: 2px;
+  width: 264px;
+  max-height: 178px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-photo {
+  border-radius: 4px;
+  height: 80px;
+  width: 80px;
+  margin: 4px;
 }
 
 .email-icon {
@@ -302,6 +366,69 @@ footer {
 
 .calendar-icon {
   margin-right: 10px;
+}
+
+.photo-icon {
+  margin-right: 10px;
+}
+
+.dashboard-main {
+  background-color: rgba(231, 236, 240, 1.0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.trip-main {
+  margin: 10px;
+  width: 430px;
+  height: 330px;
+  border: 1px solid #e7e7e7;
+  border-radius: 6px;
+  padding: 15px;
+  background-color: rgb(255, 255, 255);
+}
+
+.trip-main-first {
+  margin: 10px;
+  width: 430px;
+  height: 330px;
+  background-color: rgba(231, 236, 240, 1.0);
+}
+
+.trip-header {
+  margin-bottom: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.trip-images-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.trip-grid-photo {
+  border-radius: 3px;
+  margin: 5px;
+  height: 100px;
+  width: 160px;
+}
+
+.trip-stats {
+  margin-top: 12px;
+  color: rgb(99, 113, 127);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.trip-stats-icon {
+  margin-right: 5px;
 }
 
 #right-subheader {
