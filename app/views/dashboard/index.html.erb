@@ -3,10 +3,10 @@
     <div class="nav-logo"><%= image_tag("roadtripper_logo", class: "nav-photo nav-logo")%></div>
   </div>
   <div class="nav-container">
-    <div class="nav-icon"><%= image_tag("road_icon", class: "nav-photo") %></div>
+    <div class="nav-icon"><%= link_to image_tag("road_icon", class: "nav-photo"), root_path %></div>
   </div>
   <div class="nav-container">
-    <div class="nav-photo"><a href="<%= dashboard_path %>"><%= image_tag(current_user.photo, class: "nav-photo") %></a></div>
+    <div class="nav-photo"><a href="<%= dashboard_path %>"><%= image_tag(current_user.photo, class: "nav-profile-pic") %></a></div>
     <div><%= button_to "Logout", logout_path, method: :delete, class: "btn btn-success logout-button" %></div>
   </div>
 </nav>
