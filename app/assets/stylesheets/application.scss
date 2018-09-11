@@ -195,8 +195,9 @@ footer {
 }
 
 .nav-logo {
+  margin-top: 1px;
   margin-left: 10px;
-  height: 35px;
+  height: 30px;
 }
 
 .logout-button {
@@ -442,6 +443,23 @@ footer {
 
 .mapbox-directions-clearfix {
   height: 30px;
+}
+
+.create-trip-button {
+  position: absolute;
+  z-index: 100;
+  color: white;
+  margin-top: 600px;
+  margin-left: 30px;
+  width: 250px;
+  height: 38px;
+  border-radius: 25px;
+  background-color: rgba(134, 175, 73, 1.0);
+  border: solid 1px rgba(134, 175, 73, 1.0);
+}
+
+.mapboxgl-map {
+  z-index: 0;
 }
 
 #right-subheader {
