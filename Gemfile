@@ -17,6 +17,7 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'omniauth-google-oauth2'
 gem 'figaro'
+gem 'geocoder'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -32,6 +33,7 @@ group :test do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'launchy'
+  gem 'rspec-rails'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
