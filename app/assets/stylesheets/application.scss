@@ -184,18 +184,19 @@ footer {
   height: 100%;
 }
 
+.nav-profile-pic {
+   border-radius: 50%;
+   height: 100%;
+   margin-top: 2px;
+}
+
 .nav-icon {
   height: 36px;
 }
 
-.nav-photo {
-  height: 36px;
-  border-radius: 50px;
-}
-
 .nav-logo {
-  height: 36px;
-  border-radius: 5px;
+  margin-left: 10px;
+  height: 35px;
 }
 
 .logout-button {
