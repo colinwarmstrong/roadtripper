@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20180911012531) do
   create_table "trips", force: :cascade do |t|
     t.bigint "user_id"
     t.string "title"
-    t.integer "days"
+    t.integer "days", default: 3
     t.integer "distance"
     t.point "start_location"
     t.point "end_location"

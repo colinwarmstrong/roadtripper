@@ -7,14 +7,16 @@ class TripsController < ApplicationController
   private
 
   def trip_params
-    params.permit(:start_location, :end_location, :trip_distance, :trip_time, :trip_title)
+    params.permit(:trip_title, :trip_days, :trip_buddies, :start_location, :end_location, :trip_distance, :trip_time)
   end
 
   def trip_information
     {title: trip_params[:trip_title],
      distance: distance,
+     days: trip_params[:trip_days],
+     buddies: trip_params[:trip_buddies],
      start_location: start_location,
-     end_location: end_location
+     end_location: end_location,
      }
   end
 

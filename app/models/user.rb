@@ -14,4 +14,16 @@ class User < ApplicationRecord
       user.token = auth['credentials']['token']
     end
   end
+
+  def trip_count
+    trips.count
+  end
+
+  def total_trip_distance
+    trips.sum(:distance)
+  end
+
+  def ordered_trips
+    trips.order(created_at: :desc)
+  end
 end
