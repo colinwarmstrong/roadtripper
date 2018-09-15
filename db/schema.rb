@@ -24,7 +24,9 @@ ActiveRecord::Schema.define(version: 20180911012531) do
     t.string "title"
     t.integer "days"
     t.integer "distance"
-    t.integer "buddies"
+    t.point "start_location"
+    t.point "end_location"
+    t.integer "buddies", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_trips_on_user_id"

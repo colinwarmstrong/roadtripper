@@ -1,6 +1,8 @@
 class User < ApplicationRecord
+  validates_presence_of :provider, :uid, :email, :first_name, :last_name, :photo, :token
+
   has_many :trips
-  
+
   def self.create_with_omniauth(auth)
     create! do |user|
       user.provider = auth['provider']

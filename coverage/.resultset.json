@@ -1,0 +1,126 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/models/trip.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/models/user.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/controllers/map_controller.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/controllers/application_controller.rb": [
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/controllers/trips_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/controllers/users_controller.rb": [
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0
+      ],
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/controllers/sessions_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/controllers/welcome_controller.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/controllers/dashboard_controller.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/colinarmstrong/Turing/mod3/roadtripper/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1536860206
+  }
+}

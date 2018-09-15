@@ -34,6 +34,8 @@ group :test do
   gem 'shoulda-matchers'
   gem 'launchy'
   gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'simplecov'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

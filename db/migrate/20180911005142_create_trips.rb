@@ -5,7 +5,9 @@ class CreateTrips < ActiveRecord::Migration[5.1]
       t.string :title
       t.integer :days
       t.integer :distance
-      t.integer :buddies
+      t.point :start_location
+      t.point :end_location
+      t.integer :buddies, default: 1
 
       t.timestamps
     end
