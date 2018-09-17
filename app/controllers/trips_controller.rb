@@ -1,4 +1,8 @@
 class TripsController < ApplicationController
+  def show
+    @trip = current_user.trips.find(trip_params[:id])
+  end
+
   def create
     current_user.trips.create!(trip_information)
     redirect_to dashboard_path
@@ -7,7 +11,7 @@ class TripsController < ApplicationController
   private
 
   def trip_params
-    params.permit(:trip_title, :trip_days, :trip_buddies, :start_location, :end_location, :trip_distance, :trip_time)
+    params.permit(:trip_title, :trip_days, :trip_buddies, :start_location, :end_location, :trip_distance, :trip_time, :id)
   end
 
   def trip_information

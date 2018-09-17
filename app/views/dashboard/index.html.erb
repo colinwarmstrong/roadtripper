@@ -3,7 +3,7 @@
     <div class="nav-logo"><%= image_tag("roadtripper_logo", class: "nav-photo nav-logo")%></div>
   </div>
   <div class="nav-container">
-    <div class="nav-icon"><%= link_to image_tag("road_icon", class: "nav-photo"), root_path %></div>
+    <div class="nav-icon"><%= link_to image_tag("road_logo", class: "nav-photo"), root_path %></div>
   </div>
   <div class="nav-container">
     <div class="nav-photo"><a href="<%= dashboard_path %>"><%= image_tag(current_user.photo, class: "nav-profile-pic") %></a></div>
@@ -44,11 +44,11 @@
     </div>
     <div class="cities-info">
       <div class="trip-count-title">States</div>
-      <div class="trip-count-number">15</div>
+      <div class="trip-count-number"><%= "15" %></div>
     </div>
     <div class="buddies-info">
       <div class="trip-count-title">Buddies</div>
-      <div class="trip-count-number">13</div>
+      <div class="trip-count-number"><%= current_user.buddy_count %></div>
     </div>
   </div>
   <div class="nav-container">
@@ -61,22 +61,24 @@
   <div class='trip-main-first'>
   </div>
   <% current_user.ordered_trips.each do |trip| %>
-    <div class="trip-main">
-      <div class="trip-header">
-        <h4><%= trip.title %></h4>
+    <a href="<%= trip_path(trip)%>" class='trip-link'>
+      <div class="trip-main">
+        <div class="trip-header">
+          <h4><%= trip.title %></h4>
+        </div>
+        <div class="trip-images-grid">
+          <div><%= image_tag("california_1", class: "trip-grid-photo") %></div>
+          <div><%= image_tag("california_2", class: "trip-grid-photo") %></div>
+          <div><%= image_tag("midwest_2", class: "trip-grid-photo") %></div>
+          <div><%= image_tag("california_4", class: "trip-grid-photo") %></div>
+        </div>
+        <div class="trip-stats">
+          <div><i class="fas fa-calendar-plus trip-stats-icon"></i><%= trip.days %> days</div>
+          <div><i class="fas fa-road trip-stats-icon"></i><%= trip.distance %> mi</div>
+          <div><i class="fas fa-users trip-stats-icon"></i><%= trip.buddies %> buddies</div>
+        </div>
       </div>
-      <div class="trip-images-grid">
-        <div><%= image_tag("california_1", class: "trip-grid-photo") %></div>
-        <div><%= image_tag("california_2", class: "trip-grid-photo") %></div>
-        <div><%= image_tag("california_3", class: "trip-grid-photo") %></div>
-        <div><%= image_tag("california_4", class: "trip-grid-photo") %></div>
-      </div>
-      <div class="trip-stats">
-        <div><i class="fas fa-calendar-plus trip-stats-icon"></i><%= trip.days %> days</div>
-        <div><i class="fas fa-road trip-stats-icon"></i><%= trip.distance %> mi</div>
-        <div><i class="fas fa-users trip-stats-icon"></i><%= trip.buddies %> buddies</div>
-      </div>
-    </div>
+    </a>
   <% end %>
 </section>
 

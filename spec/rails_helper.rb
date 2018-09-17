@@ -1,5 +1,10 @@
 require 'simplecov'
-SimpleCov.start 'rails'
+SimpleCov.start 'rails' do
+  add_filter "app/channels/application_cable/channel.rb"
+  add_filter "app/channels/application_cable/connection.rb"
+  add_filter "app/jobs/application_job.rb"
+  add_filter "app/mailers/application_mailer.rb"
+end
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
@@ -7,6 +12,25 @@ require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 require 'database_cleaner'
+
+def stub_omniauth
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new('provider' => "google",
+                                                              'uid' => "12345678910",
+                                                              'info' => {
+                                                                'email' => "test@email.com",
+                                                                'first_name' => "Jimmy",
+                                                                'last_name' => "Smith",
+                                                                'image' => 'california_1.jpg'
+                                                              },
+                                                              'credentials' => {
+                                                                'token' => "abcdefg12345",
+                                                                'refresh_token' => "12345abcdefg",
+                                                                'expires_at' => DateTime.now
+                                                              }
+                                                            )
+
+end
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|

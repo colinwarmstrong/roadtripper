@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#index'
   get '/map', to: 'map#index'
   resources :user, only: [:edit, :update]
-  resources :trips, only: [:create]
+  resources :trips, only: [:create, :show]
 end

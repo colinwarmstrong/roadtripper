@@ -38,6 +38,10 @@ footer {
   flex-wrap: wrap;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .form-block {
   font-size: 20px;
   margin-top: 45px;
@@ -68,7 +72,7 @@ footer {
 
 .left-main {
   background-color: rgba(68, 82, 0, 1.0);
-  background: image-url("welcome_road.jpeg");
+  background: image-url("welcome_road.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 50%;
@@ -181,12 +185,12 @@ footer {
 }
 
 .nav-photo {
-  height: 100%;
+  height: 87%;
 }
 
 .nav-profile-pic {
    border-radius: 50%;
-   height: 100%;
+   height: 110%;
    margin-top: 2px;
 }
 
@@ -212,7 +216,7 @@ footer {
 
 .dashboard-header {
   background-color: rgba(68, 82, 0, 1.0);
-  background: url("dashboard_header2.png");
+  background: url("dashboard_header.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -237,6 +241,20 @@ footer {
   color: rgb(99, 113, 127);
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+.trip-show-info-bar {
+  color: rgb(99, 113, 127);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trip-show-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -382,6 +400,27 @@ footer {
   align-items: center;
 }
 
+.trip-show-main {
+  text-align: center;
+  height: 100%;
+  background-color: rgba(231, 236, 240, 1.0);
+  display: flex;
+  justify-content: space-around;
+}
+
+.trip-show-main-section {
+  height: 90%;
+  width: 90%;
+}
+
+.trip-show-main-article {
+  height: 80%;
+  width: 90%;
+  margin: 20px;
+  background-color: white;
+  border-radius: 15px;
+}
+
 .trip-main {
   margin: 10px;
   width: 430px;
@@ -390,6 +429,14 @@ footer {
   border-radius: 6px;
   padding: 15px;
   background-color: rgb(255, 255, 255);
+  color: black;
+  text-decoration: none;
+  background-color: none;
+}
+
+.trip-main:hover {
+  box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.25);
+  text-decoration: none;
 }
 
 .trip-main-first {
@@ -399,12 +446,17 @@ footer {
   background-color: rgba(231, 236, 240, 1.0);
 }
 
+.trip-link {
+  text-decoration: none;
+}
+
 .trip-header {
   margin-bottom: 7px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .trip-images-grid {
@@ -454,8 +506,8 @@ footer {
   z-index: 100;
   display: flex;
   flex-direction: column;
-  margin-top: 54%;
-  margin-left: 3%;
+  margin-top: 34px;
+  margin-left: 327px;
   width: 250px;
 }
 
@@ -473,6 +525,10 @@ footer {
 
 .create-trip-buddies {
   width: 250px;
+}
+
+.nav-trip-title {
+  margin-bottom: 0px;
 }
 
 #create-trip-title {

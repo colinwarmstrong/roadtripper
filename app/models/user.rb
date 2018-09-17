@@ -26,4 +26,17 @@ class User < ApplicationRecord
   def ordered_trips
     trips.order(created_at: :desc)
   end
+
+  def total_states
+    states = trips.map do |trip|
+      start_state = Geocoder.search([trip.start_location.x, trip.start_location.y]).first.state
+      end_state = Geocoder.search([trip.end_location.x, trip.end_location.y]).first.state
+      [start_state, end_state]
+    end
+    states.flatten.uniq.count
+  end
+
+  def buddy_count
+    trips.sum(:buddies) - trips.count
+  end
 end
