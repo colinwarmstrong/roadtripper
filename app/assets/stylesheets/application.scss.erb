@@ -11,8 +11,6 @@
 * It is generally better to create a new file per style scope.
 */
 
-@import 'bootstrap';
-
 body, html {
   height: 100%;
   padding: 0px;
@@ -38,8 +36,30 @@ footer {
   flex-wrap: wrap;
 }
 
+h3 {
+  margin: 0px;
+}
+
 a:hover {
   text-decoration: none;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-expand-lg {
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.navbar-light {
+
 }
 
 .form-block {
@@ -63,6 +83,27 @@ a:hover {
   padding-right: 10px;
   padding-top: 8px;
 }
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
 
 .main {
   height: 95%;
@@ -225,6 +266,22 @@ a:hover {
   overflow: hidden;
 }
 
+.trip-show-dashboard-header{
+  height: 150px;
+  overflow: hidden;
+}
+
+.trip-show-dashboard-header-photo {
+  width: 100%;
+  background-color: rgba(68, 82, 0, 1.0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  display: block;
+  margin-top: -300px;
+}
+
 .sub-nav {
   height: 60px;
   width: 100%;
@@ -247,7 +304,7 @@ a:hover {
 .trip-show-info-bar {
   color: rgb(99, 113, 127);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -413,14 +470,6 @@ a:hover {
   width: 90%;
 }
 
-.trip-show-main-article {
-  height: 80%;
-  width: 90%;
-  margin: 20px;
-  background-color: white;
-  border-radius: 15px;
-}
-
 .trip-main {
   margin: 10px;
   width: 430px;
@@ -432,6 +481,30 @@ a:hover {
   color: black;
   text-decoration: none;
   background-color: none;
+}
+
+.trip-show-main-article {
+  height: 92.8%;
+  width: 90%;
+  margin: 20px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.trip-show-main-map {
+  margin: 20px;
+  height: 45%;
+  width: 90%;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.trip-show-main-weather {
+  margin: 20px;
+  height: 45%;
+  width: 90%;
+  background-color: white;
+  border-radius: 15px;
 }
 
 .trip-main:hover {
@@ -531,6 +604,74 @@ a:hover {
   margin-bottom: 0px;
 }
 
+.trip-show-trip-title {
+  color: rgb(99, 113, 127);
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trip-main-header {
+  padding-bottom: 6px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid rgba(99, 113, 127, 0.3);
+}
+
+.weather-info-section {
+  width: 25%;
+  overflow-wrap: normal;
+}
+
+.map-photo {
+  margin-top: 13px;
+  height: 92%;
+  width: 92%;
+}
+
+.start-location-weather {
+  border-bottom: 1px solid rgba(99, 113, 127, 0.3);
+  height: 43%;
+}
+
+.end-location-weather {
+  height: 45%;
+}
+
+.weather-info {
+  padding: 15px;
+  margin-top: -4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lodging-info {
+  height: 100%;
+}
+
+.lodging-info-section {
+  height: 18%;
+  border-bottom: 1px solid rgba(99, 113, 127, 0.3);
+}
+
+.lodging-info-section-last {
+  height: 18%;
+}
+
+.activity-info {
+  height: 100%;
+}
+
+.activity-info-section {
+  height: 18%;
+  border-bottom: 1px solid rgba(99, 113, 127, 0.3);
+}
+
+.activity-info-section-last {
+  height: 18%;
+}
+
 #create-trip-title {
   width: 100%;
 }
@@ -560,4 +701,14 @@ a:hover {
 
 #lodging-line {
   margin-right: 5px;
+}
+
+#mini-map {
+  height: 90%;
+  width: 90%;
+}
+
+#weather-summary {
+  text-wrap: normal;
+  word-break: break-all;
 }

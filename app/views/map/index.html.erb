@@ -1,78 +1,62 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8' />
-    <title>Display driving directions</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light global-nav">
-      <div class="nav-container">
-        <div class="nav-logo"><%= image_tag("roadtripper_logo", class: "nav-photo nav-logo")%></div>
-      </div>
-      <div class="nav-container">
-        <div class="nav-icon"><%= link_to image_tag("road_icon", class: "nav-photo"), root_path %></div>
-      </div>
-      <div class="nav-container">
-        <div class="nav-photo"><a href="<%= dashboard_path %>"><%= image_tag(current_user.photo, class: "nav-profile-pic") %></a></div>
-        <div><%= button_to "Logout", logout_path, method: :delete, class: "btn btn-success logout-button" %></div>
-      </div>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-light global-nav">
+  <div class="nav-container">
+    <div class="nav-logo"><%= image_tag("roadtripper_logo", class: "nav-photo nav-logo")%></div>
+  </div>
+  <div class="nav-container">
+    <div class="nav-icon"><%= link_to image_tag("road_logo", class: "nav-photo"), root_path %></div>
+  </div>
+  <div class="nav-container">
+    <div class="nav-photo"><a href="<%= dashboard_path %>"><%= image_tag(current_user.photo, class: "nav-profile-pic") %></a></div>
+    <div><%= button_to "Logout", logout_path, method: :delete, class: "btn btn-success logout-button" %></div>
+  </div>
+</nav>
 
-    <div class="create-trip-form">
-      <%= form_tag trips_path, method: :post do %>
-        <%= hidden_field_tag :start_location, id: 'start_location' %>
-        <%= hidden_field_tag :end_location, id: 'end_location' %>
-        <%= hidden_field_tag :trip_distance, id: 'trip_distance' %>
-        <%= hidden_field_tag :trip_time, id: 'trip_time' %>
-        <%= text_field_tag :trip_title, nil, placeholder: 'Enter trip title...', id: 'create-trip-title' %>
-        <%= number_field_tag :trip_days, nil, min: 1, step: 1, placeholder: 'Enter number of days...', class: 'create-trip-days' %>
-        <%= number_field_tag :trip_buddies, nil, min: 1, step: 1, placeholder: 'Enter number of people...', class: 'create-trip-buddies' %>
-        <%= submit_tag 'Create Trip', class: "btn btn-success create-trip-button" %>
-      <% end %>
-   </div>
+<div class="create-trip-form">
+  <%= form_tag trips_path, method: :post do %>
+    <%= hidden_field_tag :start_location, id: 'start_location' %>
+    <%= hidden_field_tag :end_location, id: 'end_location' %>
+    <%= hidden_field_tag :trip_distance, id: 'trip_distance' %>
+    <%= hidden_field_tag :trip_time, id: 'trip_time' %>
+    <%= text_field_tag :trip_title, nil, placeholder: 'Enter trip title...', id: 'create-trip-title', required: true %>
+    <%= number_field_tag :trip_days, nil, min: 1, step: 1, placeholder: 'Enter number of days...', class: 'create-trip-days', required: true %>
+    <%= number_field_tag :trip_buddies, nil, min: 1, step: 1, placeholder: 'Enter number of people...', class: 'create-trip-buddies', required: true %>
+    <%= submit_tag 'Create Trip', class: "btn btn-success create-trip-button" %>
+  <% end %>
+</div>
 
-    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.js'></script>
-    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.css' type='text/css' />
-    <div id='map'>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.css' type='text/css' />
+<div id='map'>
 
-      <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiY29saW53YXJtc3Ryb25nIiwiYSI6ImNqbHUyZXR4eDBmOG8za24wcDRweWNjdDYifQ._sImOUxG-2VsDQ9xud_3PA';
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v9',
-            center: [-104.98765,39.73930],
-            zoom: 5
-        });
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY29saW53YXJtc3Ryb25nIiwiYSI6ImNqbHUyZXR4eDBmOG8za24wcDRweWNjdDYifQ._sImOUxG-2VsDQ9xud_3PA';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        center: [-104.98765,39.73930],
+        zoom: 5
+    });
 
-        map.addControl(new mapboxgl.NavigationControl());
+    map.addControl(new mapboxgl.NavigationControl());
 
-        map.addControl(new MapboxDirections({
-            accessToken: mapboxgl.accessToken,
-            profile: 'mapbox/driving'
-        }), 'top-left');
-      </script>
+    map.addControl(new MapboxDirections({
+        accessToken: mapboxgl.accessToken,
+        profile: 'mapbox/driving'
+    }), 'top-left');
+  </script>
 
-      <script type="text/javascript">
-        $('.btn.btn-success.create-trip-button').on('click', function() {
-          let startDestination = $('span.geocoder-icon.geocoder-icon-search').siblings('input')[0].value;
-          let endDestination   = $('span.geocoder-icon.geocoder-icon-search').siblings('input')[1].value;
-          let tripDistance     = $('div.mapbox-directions-component.mapbox-directions-route-summary').children('h1').text();
-          let tripTime         = $('div.mapbox-directions-component.mapbox-directions-route-summary').children('span').text();
+  <script type="text/javascript">
+    $('.btn.btn-success.create-trip-button').on('click', function() {
+      let startDestination = $('span.geocoder-icon.geocoder-icon-search').siblings('input')[0].value;
+      let endDestination   = $('span.geocoder-icon.geocoder-icon-search').siblings('input')[1].value;
+      let tripDistance     = $('div.mapbox-directions-component.mapbox-directions-route-summary').children('h1').text();
+      let tripTime         = $('div.mapbox-directions-component.mapbox-directions-route-summary').children('span').text();
 
-          document.getElementById('start_location').value = startDestination;
-          document.getElementById('end_location').value = endDestination;
-          document.getElementById('trip_distance').value = tripDistance;
-          document.getElementById('trip_time').value = tripTime;
-        });
-      </script>
+      document.getElementById('start_location').value = startDestination;
+      document.getElementById('end_location').value = endDestination;
+      document.getElementById('trip_distance').value = tripDistance;
+      document.getElementById('trip_time').value = tripTime;
+    });
+  </script>
 
-    </div>
-</body>
-</html>
+</div>

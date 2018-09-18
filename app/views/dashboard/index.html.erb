@@ -67,10 +67,9 @@
           <h4><%= trip.title %></h4>
         </div>
         <div class="trip-images-grid">
-          <div><%= image_tag("california_1", class: "trip-grid-photo") %></div>
-          <div><%= image_tag("california_2", class: "trip-grid-photo") %></div>
-          <div><%= image_tag("midwest_2", class: "trip-grid-photo") %></div>
-          <div><%= image_tag("california_4", class: "trip-grid-photo") %></div>
+          <% trip.photos.to_a.shift(4).each do |photo| %>
+            <div><%= image_tag(photo.source, class: "trip-grid-photo") %></div>
+          <% end %>
         </div>
         <div class="trip-stats">
           <div><i class="fas fa-calendar-plus trip-stats-icon"></i><%= trip.days %> days</div>
