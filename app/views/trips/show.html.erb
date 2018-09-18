@@ -139,21 +139,13 @@
     <article class="trip-show-main-article">
       <h2 class='trip-main-header'>Activities</h2>
       <div class="activity-info">
-        <div class="activity-info-section">
-          <h4>Activity 1</h4>
-        </div>
-        <div class="activity-info-section">
-          <h4>Activity 2</h4>
-        </div>
-        <div class="activity-info-section">
-          <h4>Activity 3</h4>
-        </div>
-        <div class="activity-info-section">
-          <h4>Activity 4</h4>
-        </div>
-        <div class="activity-info-section-last">
-          <h4>Activity 5</h4>
-        </div>
+        <% @activities.activity_options.each_with_index do |activity, index| %>
+          <div class="activity-info-section" id="<%= "activity-#{index}" %>">
+            <h5 class='activity-name'><%= activity.name %></h5>
+            <p>Category: <%= activity.type %></p>
+            <p><%= link_to 'Get Tickets Now', activity.url %></p>
+          </div>
+        <% end %>
       </div>
     </article>
   </div>
