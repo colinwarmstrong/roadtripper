@@ -3,6 +3,7 @@ class TripsController < ApplicationController
     @trip = current_user.trips.find(trip_params[:id])
     @start_weather = WeatherPresenter.new(@trip.start_location.x, @trip.start_location.y)
     @end_weather = WeatherPresenter.new(@trip.end_location.x, @trip.end_location.y)
+    @lodging = LodgingPresenter.new(@trip.end_location.x, @trip.end_location.y)
   end
 
   def create
