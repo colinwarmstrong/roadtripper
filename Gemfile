@@ -13,7 +13,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
-gem 'bootstrap'
 gem 'jquery-rails'
 gem 'omniauth-google-oauth2'
 gem 'figaro'
@@ -22,6 +21,8 @@ gem 'geocoder'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
@@ -34,6 +35,8 @@ group :test do
   gem 'shoulda-matchers'
   gem 'launchy'
   gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'simplecov'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

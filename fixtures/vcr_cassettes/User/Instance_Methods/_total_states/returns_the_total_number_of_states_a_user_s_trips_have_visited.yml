@@ -1,0 +1,267 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/reverse?accept-language=en&addressdetails=1&format=json&lat=34.0536834&lon=-118.2427669
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 18 Sep 2018 23:05:10 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=0, report-uri="https://openstreetmap.report-uri.com/r/d/ct/reportOnly"
+      Upgrade:
+      - h2
+      Connection:
+      - Upgrade, close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwbGFjZV9pZCI6IjIzNjE3MTAwNCIsImxpY2VuY2UiOiJEYXRhIMKpIE9wZW5TdHJlZXRNYXAgY29udHJpYnV0b3JzLCBPRGJMIDEuMC4gaHR0cHM6XC9cL29zbS5vcmdcL2NvcHlyaWdodCIsIm9zbV90eXBlIjoicmVsYXRpb24iLCJvc21faWQiOiI2MzMzMTQ1IiwibGF0IjoiMzQuMDUzNjk2MDUiLCJsb24iOiItMTE4LjI0MjkyMTIxODMzNCIsImRpc3BsYXlfbmFtZSI6IkxvcyBBbmdlbGVzIENpdHkgSGFsbCwgMjAwLCBOb3J0aCBTcHJpbmcgU3RyZWV0LCBDaXZpYyBDZW50ZXIsIExpdHRsZSBUb2t5byBIaXN0b3JpYyBEaXN0cmljdCwgTG9zIEFuZ2VsZXMsIExvcyBBbmdlbGVzIENvdW50eSwgQ2FsaWZvcm5pYSwgOTAwMTIsIFVTQSIsImFkZHJlc3MiOnsiYWRkcmVzczI5IjoiTG9zIEFuZ2VsZXMgQ2l0eSBIYWxsIiwiaG91c2VfbnVtYmVyIjoiMjAwIiwicm9hZCI6Ik5vcnRoIFNwcmluZyBTdHJlZXQiLCJuZWlnaGJvdXJob29kIjoiQ2l2aWMgQ2VudGVyIiwic3VidXJiIjoiTGl0dGxlIFRva3lvIEhpc3RvcmljIERpc3RyaWN0IiwiY2l0eSI6IkxvcyBBbmdlbGVzIiwiY291bnR5IjoiTG9zIEFuZ2VsZXMgQ291bnR5Iiwic3RhdGUiOiJDYWxpZm9ybmlhIiwicG9zdGNvZGUiOiI5MDAxMiIsImNvdW50cnkiOiJVU0EiLCJjb3VudHJ5X2NvZGUiOiJ1cyJ9LCJib3VuZGluZ2JveCI6WyIzNC4wNTMwMTQxIiwiMzQuMDU0MzcxMyIsIi0xMTguMjQzNTMiLCItMTE4LjI0MjAwNTIiXX0=
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 23:05:11 GMT
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/reverse?accept-language=en&addressdetails=1&format=json&lat=37.7792808&lon=-122.4192363
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 18 Sep 2018 23:05:12 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=0, report-uri="https://openstreetmap.report-uri.com/r/d/ct/reportOnly"
+      Upgrade:
+      - h2
+      Connection:
+      - Upgrade, close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwbGFjZV9pZCI6IjE5OTA1MDE3MiIsImxpY2VuY2UiOiJEYXRhIMKpIE9wZW5TdHJlZXRNYXAgY29udHJpYnV0b3JzLCBPRGJMIDEuMC4gaHR0cHM6XC9cL29zbS5vcmdcL2NvcHlyaWdodCIsIm9zbV90eXBlIjoicmVsYXRpb24iLCJvc21faWQiOiI3MjYxODIwIiwibGF0IjoiMzcuNzc5MjkyOSIsImxvbiI6Ii0xMjIuNDE5MjYwMzIzODEiLCJkaXNwbGF5X25hbWUiOiJTYW4gRnJhbmNpc2NvIENpdHkgSGFsbCwgMSwgUG9sayBTdHJlZXQsIENpdmljIENlbnRlciwgU2FuIEZyYW5jaXNjbywgU2FuIEZyYW5jaXNjbyBDaXR5IGFuZCBDb3VudHksIENhbGlmb3JuaWEsIDk0MTAyLCBVU0EiLCJhZGRyZXNzIjp7InRvd25oYWxsIjoiU2FuIEZyYW5jaXNjbyBDaXR5IEhhbGwiLCJob3VzZV9udW1iZXIiOiIxIiwicm9hZCI6IlBvbGsgU3RyZWV0IiwibmVpZ2hib3VyaG9vZCI6IkNpdmljIENlbnRlciIsImNpdHkiOiJTYW4gRnJhbmNpc2NvIiwiY291bnR5IjoiU2FuIEZyYW5jaXNjbyBDaXR5IGFuZCBDb3VudHkiLCJzdGF0ZSI6IkNhbGlmb3JuaWEiLCJwb3N0Y29kZSI6Ijk0MTAyIiwiY291bnRyeSI6IlVTQSIsImNvdW50cnlfY29kZSI6InVzIn0sImJvdW5kaW5nYm94IjpbIjM3Ljc3ODY1NTQiLCIzNy43Nzk4OTcyIiwiLTEyMi40MTk4MzMiLCItMTIyLjQxODYzIl19
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 23:05:12 GMT
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/reverse?accept-language=en&addressdetails=1&format=json&lat=39.7391428&lon=-104.984696
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 18 Sep 2018 23:05:13 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=0, report-uri="https://openstreetmap.report-uri.com/r/d/ct/reportOnly"
+      Upgrade:
+      - h2
+      Connection:
+      - Upgrade, close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwbGFjZV9pZCI6Ijg0Nzc5NzEzIiwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwczpcL1wvb3NtLm9yZ1wvY29weXJpZ2h0Iiwib3NtX3R5cGUiOiJ3YXkiLCJvc21faWQiOiIzNDAwODA0MyIsImxhdCI6IjM5LjczOTIxMTUiLCJsb24iOiItMTA0Ljk4NDg0Njc0NTI5OCIsImRpc3BsYXlfbmFtZSI6IlN0YXRlIENhcGl0b2wgQnVpbGRpbmcsIDIwMCwgRWFzdCBDb2xmYXggQXZlbnVlLCBDaXZpYyBDZW50ZXIsIERlbnZlciwgRGVudmVyIENvdW50eSwgQ29sb3JhZG8sIDgwMjAzLCBVU0EiLCJhZGRyZXNzIjp7ImJ1aWxkaW5nIjoiU3RhdGUgQ2FwaXRvbCBCdWlsZGluZyIsImhvdXNlX251bWJlciI6IjIwMCIsInJvYWQiOiJFYXN0IENvbGZheCBBdmVudWUiLCJuZWlnaGJvdXJob29kIjoiQ2l2aWMgQ2VudGVyIiwiY2l0eSI6IkRlbnZlciIsImNvdW50eSI6IkRlbnZlciBDb3VudHkiLCJzdGF0ZSI6IkNvbG9yYWRvIiwicG9zdGNvZGUiOiI4MDIwMyIsImNvdW50cnkiOiJVU0EiLCJjb3VudHJ5X2NvZGUiOiJ1cyJ9LCJib3VuZGluZ2JveCI6WyIzOS43Mzg2NzI3IiwiMzkuNzM5ODAyMSIsIi0xMDQuOTg1NDE5NCIsIi0xMDQuOTg0Mjc0MiJdfQ==
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 23:05:15 GMT
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/reverse?accept-language=en&addressdetails=1&format=json&lat=42.3486635&lon=-83.0567375
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 18 Sep 2018 23:05:15 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=0, report-uri="https://openstreetmap.report-uri.com/r/d/ct/reportOnly"
+      Upgrade:
+      - h2
+      Connection:
+      - Upgrade, close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwbGFjZV9pZCI6IjE0ODY3NzExNSIsImxpY2VuY2UiOiJEYXRhIMKpIE9wZW5TdHJlZXRNYXAgY29udHJpYnV0b3JzLCBPRGJMIDEuMC4gaHR0cHM6XC9cL29zbS5vcmdcL2NvcHlyaWdodCIsIm9zbV90eXBlIjoid2F5Iiwib3NtX2lkIjoiMzE4MzkzOTQyIiwibGF0IjoiNDIuMzQ4NTI0OSIsImxvbiI6Ii04My4wNTY1MjE0MjYyMDUyIiwiZGlzcGxheV9uYW1lIjoiV2hvbGUgRm9vZHMsIDExNSwgTWFjayBBdmVudWUsIEVhc3Rlcm4gTWFya2V0LCBEZXRyb2l0LCBXYXluZSBDb3VudHksIE1pY2hpZ2FuLCA0ODIwMSwgVVNBIiwiYWRkcmVzcyI6eyJzdXBlcm1hcmtldCI6Ildob2xlIEZvb2RzIiwiaG91c2VfbnVtYmVyIjoiMTE1Iiwicm9hZCI6Ik1hY2sgQXZlbnVlIiwibmVpZ2hib3VyaG9vZCI6IkVhc3Rlcm4gTWFya2V0IiwiY2l0eSI6IkRldHJvaXQiLCJjb3VudHkiOiJXYXluZSBDb3VudHkiLCJzdGF0ZSI6Ik1pY2hpZ2FuIiwicG9zdGNvZGUiOiI0ODIwMSIsImNvdW50cnkiOiJVU0EiLCJjb3VudHJ5X2NvZGUiOiJ1cyJ9LCJib3VuZGluZ2JveCI6WyI0Mi4zNDgyNDU1IiwiNDIuMzQ4Nzk4MSIsIi04My4wNTY5MzI4IiwiLTgzLjA1NjE2MzciXX0=
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 23:05:16 GMT
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/reverse?accept-language=en&addressdetails=1&format=json&lat=33.7490987&lon=-84.3901849
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 18 Sep 2018 23:05:17 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=0, report-uri="https://openstreetmap.report-uri.com/r/d/ct/reportOnly"
+      Upgrade:
+      - h2
+      Connection:
+      - Upgrade, close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwbGFjZV9pZCI6IjEwMDg0ODYyNCIsImxpY2VuY2UiOiJEYXRhIMKpIE9wZW5TdHJlZXRNYXAgY29udHJpYnV0b3JzLCBPRGJMIDEuMC4gaHR0cHM6XC9cL29zbS5vcmdcL2NvcHlyaWdodCIsIm9zbV90eXBlIjoid2F5Iiwib3NtX2lkIjoiMTEzMDQxOTA5IiwibGF0IjoiMzMuNzQ4NjE5NSIsImxvbiI6Ii04NC4zOTA3NzI1NTAxNzg2IiwiZGlzcGxheV9uYW1lIjoiQXRsYW50YSBDaXR5IEhhbGwsIDU1LCBUcmluaXR5IEF2ZW51ZSBTb3V0aHdlc3QsIFNvdXRoIERvd250b3duLCBBdGxhbnRhLCBGdWx0b24gQ291bnR5LCBHZW9yZ2lhLCAzMDMwMywgVVNBIiwiYWRkcmVzcyI6eyJ0b3duaGFsbCI6IkF0bGFudGEgQ2l0eSBIYWxsIiwiaG91c2VfbnVtYmVyIjoiNTUiLCJyb2FkIjoiVHJpbml0eSBBdmVudWUgU291dGh3ZXN0IiwibmVpZ2hib3VyaG9vZCI6IlNvdXRoIERvd250b3duIiwiY2l0eSI6IkF0bGFudGEiLCJjb3VudHkiOiJGdWx0b24gQ291bnR5Iiwic3RhdGUiOiJHZW9yZ2lhIiwicG9zdGNvZGUiOiIzMDMwMyIsImNvdW50cnkiOiJVU0EiLCJjb3VudHJ5X2NvZGUiOiJ1cyJ9LCJib3VuZGluZ2JveCI6WyIzMy43NDgxMDc2IiwiMzMuNzQ5MTUwMSIsIi04NC4zOTEyMjkyIiwiLTg0LjM4OTkzNyJdfQ==
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 23:05:17 GMT
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/reverse?accept-language=en&addressdetails=1&format=json&lat=25.7742658&lon=-80.1936589
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 18 Sep 2018 23:05:18 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Expect-Ct:
+      - max-age=0, report-uri="https://openstreetmap.report-uri.com/r/d/ct/reportOnly"
+      Upgrade:
+      - h2
+      Connection:
+      - Upgrade, close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwbGFjZV9pZCI6IjExMTEwNDE5IiwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwczpcL1wvb3NtLm9yZ1wvY29weXJpZ2h0Iiwib3NtX3R5cGUiOiJub2RlIiwib3NtX2lkIjoiMTAyNTYzNDgyMiIsImxhdCI6IjI1Ljc3NDIxOTUiLCJsb24iOiItODAuMTkzNTM1MSIsImRpc3BsYXlfbmFtZSI6IldhbGdyZWVucywgTm9ydGggTWlhbWkgQXZlbnVlLCBNaWFtaSwgTWlhbWktRGFkZSBDb3VudHksIEZsb3JpZGEsIDMzMTM2LCBVU0EiLCJhZGRyZXNzIjp7InBoYXJtYWN5IjoiV2FsZ3JlZW5zIiwicm9hZCI6Ik5vcnRoIE1pYW1pIEF2ZW51ZSIsImNpdHkiOiJNaWFtaSIsImNvdW50eSI6Ik1pYW1pLURhZGUgQ291bnR5Iiwic3RhdGUiOiJGbG9yaWRhIiwicG9zdGNvZGUiOiIzMzEzNiIsImNvdW50cnkiOiJVU0EiLCJjb3VudHJ5X2NvZGUiOiJ1cyJ9LCJib3VuZGluZ2JveCI6WyIyNS43NzQxMTk1IiwiMjUuNzc0MzE5NSIsIi04MC4xOTM2MzUxIiwiLTgwLjE5MzQzNTEiXX0=
+    http_version: 
+  recorded_at: Tue, 18 Sep 2018 23:05:19 GMT
+recorded_with: VCR 4.0.0

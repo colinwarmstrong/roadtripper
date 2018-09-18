@@ -1,0 +1,152 @@
+<nav class="navbar navbar-expand-lg navbar-light global-nav">
+  <div class="nav-container">
+    <div class="nav-logo"><%= image_tag("roadtripper_logo", class: "nav-photo nav-logo") %></div>
+  </div>
+  <div class="nav-container">
+    <div class="nav-icon"><%= link_to image_tag("road_logo", class: "nav-photo"), root_path %></div>
+  </div>
+  <div class="nav-container">
+    <div class="nav-photo"><a href="<%= dashboard_path %>"><%= image_tag(current_user.photo, class: "nav-profile-pic") %></a></div>
+    <div><%= button_to "Logout", logout_path, method: :delete, class: "btn btn-success logout-button" %></div>
+  </div>
+</nav>
+
+<section class = "trip-show-dashboard-header">
+  <div>
+    <%= image_tag(@trip.photos.first.source, class: "trip-show-dashboard-header-photo") %>
+  </div>
+</section>
+
+<nav class="navbar navbar-expand-lg navbar-light sub-nav">
+  <div class="nav-container">
+    <div class="trip-show-trip-title">
+      <h3><%= @trip.title %></h3>
+    </div>
+  </div>
+  <div class="nav-container trip-show-info-bar">
+    <div class='trip-show-info'>
+      <div class="trip-count-title">Distance</div>
+      <div class="trip-count-number"><%= number_with_delimiter(@trip.distance, delimiter: ',') %> mi</div>
+    </div>
+    <div class='trip-show-info'>
+      <div class="trip-count-title">Days</div>
+      <div class="trip-count-number"><%= @trip.days %></div>
+    </div>
+    <div class='trip-show-info'>
+      <div class="trip-count-title">Buddies</div>
+      <div class="trip-count-number"><%= @trip.buddies %></div>
+    </div>
+  </div>
+  <div class="nav-container">
+    <%= button_to "+ Create New Trip", map_path, method: :get, class: "btn btn-success create-new-trip-button" %>
+    <%= button_to "Back to Dashboard", dashboard_path, method: :get, class: "btn btn-success edit-profile-button" %>
+  </div>
+</nav>
+
+<section class="trip-show-main">
+
+  <div class="trip-show-main-section">
+    <article class="trip-show-main-map">
+      <h2 class='trip-main-header'>Map</h2>
+      <div class="mini-map">
+        <%= image_tag("vegas_map", class: "map-photo") %>
+      </div>
+      <!-- <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.js'></script>
+      <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.css' type='text/css' />
+      <div id='map'>
+        <script>
+          mapboxgl.accessToken = 'pk.eyJ1IjoiY29saW53YXJtc3Ryb25nIiwiYSI6ImNqbHUyZXR4eDBmOG8za24wcDRweWNjdDYifQ._sImOUxG-2VsDQ9xud_3PA';
+          var map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/mapbox/streets-v9',
+              center: [-104.98765,39.73930],
+              zoom: 5
+          });
+
+          map.addControl(new mapboxgl.NavigationControl());
+
+          map.addControl(new MapboxDirections({
+              accessToken: mapboxgl.accessToken,
+              profile: 'mapbox/driving'
+          }), 'top-left');
+        </script>
+      </div> -->
+    </article>
+
+    <article class="trip-show-main-weather">
+      <h2 class='trip-main-header'>Weather</h2>
+      <div class="start-location-weather">
+        <h4><%= Geocoder.search([@trip.start_location.x, @trip.start_location.y]).first.city %></h4>
+        <div class="weather-info">
+          <div class="weather-info-section">
+            <h5>Summary</h5>
+            <p id='weather-summary'><%= @start_weather.summary %></p>
+          </div>
+          <div class="weather-info-section">
+            <h5>Temp.</h5>
+            <p><%= @start_weather.temperature.round(1) %> ℉</p>
+          </div>
+          <div class="weather-info-section">
+            <h5>Precip.</h5>
+            <p><%= number_to_percentage(@start_weather.precipitation * 100, precision: 0) %></p>
+          </div>
+          <div class="weather-info-section">
+            <h5>Humidity</h5>
+            <p><%= number_to_percentage(@start_weather.humidity * 100, precision: 0) %></p>
+          </div>
+        </div>
+      </div>
+      <div class="end-location-weather">
+        <h4 class='weather-city'><%= Geocoder.search([@trip.end_location.x, @trip.end_location.y]).first.city %></h4>
+        <div class="weather-info">
+          <div class="weather-info-section">
+            <h5>Summary</h5>
+            <p id='weather-summary'><%= @end_weather.summary %></p>
+          </div>
+          <div class="weather-info-section">
+            <h5>Temp.</h5>
+            <p><%= @end_weather.temperature.round(1) %> ℉</p>
+          </div>
+          <div class="weather-info-section">
+            <h5>Precip.</h5>
+            <p><%= number_to_percentage(@end_weather.precipitation * 100, precision: 0) %></p>
+          </div>
+          <div class="weather-info-section">
+            <h5>Humidity</h5>
+            <p><%= number_to_percentage(@end_weather.humidity * 100, precision: 0) %></p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="trip-show-main-section">
+    <article class="trip-show-main-article">
+      <h2 class='trip-main-header'>Lodging</h2>
+      <div class="lodging-info">
+        <% @lodging.lodging_options.each_with_index do |hotel, index| %>
+          <div class="lodging-info-section" id="<%= "hotel-#{index}" %>">
+            <h5 class='hotel-name'><%= hotel.name %></h4>
+            <p>Address: <%= hotel.address %></p>
+            <p>Rating: <%= hotel.rating %> stars</p>
+          </div>
+        <% end %>
+      </div>
+    </article>
+  </div>
+
+  <div class="trip-show-main-section">
+    <article class="trip-show-main-article">
+      <h2 class='trip-main-header'>Activities</h2>
+      <div class="activity-info">
+        <% @activities.activity_options.each_with_index do |activity, index| %>
+          <div class="activity-info-section" id="<%= "activity-#{index}" %>">
+            <h5 class='activity-name'><%= activity.name %></h5>
+            <p>Category: <%= activity.type %></p>
+            <p><%= link_to 'Get Tickets Now', activity.url %></p>
+          </div>
+        <% end %>
+      </div>
+    </article>
+  </div>
+</section>

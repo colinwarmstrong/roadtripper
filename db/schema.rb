@@ -16,15 +16,21 @@ ActiveRecord::Schema.define(version: 20180911012531) do
   enable_extension "plpgsql"
 
   create_table "photos", force: :cascade do |t|
+    t.bigint "trip_id"
     t.string "source"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["trip_id"], name: "index_photos_on_trip_id"
   end
 
   create_table "trips", force: :cascade do |t|
     t.bigint "user_id"
     t.string "title"
-    t.integer "days"
+    t.integer "days", default: 3
     t.integer "distance"
-    t.integer "buddies"
+    t.point "start_location"
+    t.point "end_location"
+    t.integer "buddies", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_trips_on_user_id"
@@ -42,5 +48,6 @@ ActiveRecord::Schema.define(version: 20180911012531) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "photos", "trips"
   add_foreign_key "trips", "users"
 end
