@@ -10,7 +10,6 @@ class LodgingPresenter
     end
   end
 
-
   private
   attr_reader :latitude, :longitude
 
