@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe WeatherService do
-  context 'Instance Methods' do
+  describe 'Instance Methods' do
     context '#get_weather_info' do
       it 'returns the correct weather information', :vcr do
         latitude  = '37.7792808'

@@ -20,7 +20,7 @@ describe WeatherPresenter do
 
         summary = presenter.summary
 
-        expect(summary).to eq('Partly Cloudy')
+        expect(summary).to eq('Clear')
       end
     end
 
@@ -33,7 +33,7 @@ describe WeatherPresenter do
 
         temperature = presenter.temperature
 
-        expect(temperature).to eq(64.32)
+        expect(temperature).to eq(66.05)
       end
     end
 
@@ -46,7 +46,7 @@ describe WeatherPresenter do
 
         humidity = presenter.humidity
 
-        expect(humidity).to eq(0.65)
+        expect(humidity).to eq(0.61)
       end
     end
 
