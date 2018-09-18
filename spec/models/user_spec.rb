@@ -61,22 +61,22 @@ describe User, type: :model do
                          days: 6,
                          distance: 890,
                          buddies: 4,
-                         start_location: Geocoder.search('Los Angeles').first.coordinates,
-                         end_location: Geocoder.search('San Francisco').first.coordinates)
+                         start_location: [34.0536834, -118.2427669],
+                         end_location: [37.7792808, -122.4192363])
 
       @trip_2 = @user.trips.create!(title: 'Into the Corn: A Midwestern Excursion',
                         days: 8,
                         distance: 1236,
                         buddies: 2,
-                        start_location: Geocoder.search('Denver').first.coordinates,
-                        end_location: Geocoder.search('Detroit').first.coordinates)
+                        start_location: [39.7391428, -104.984696],
+                        end_location: [42.3486635, -83.0567375])
 
       @trip_3 = @user.trips.create!(title: 'Gator Boys: A Journey Through Florida',
                         days: 4,
                         distance: 632,
                         buddies: 3,
-                        start_location: Geocoder.search('Atlanta').first.coordinates,
-                        end_location: Geocoder.search('Miami').first.coordinates)
+                        start_location: [33.7490987, -84.3901849],
+                        end_location: [25.7742658, -80.1936589])
     end
 
     context '#trips_count' do
@@ -97,7 +97,7 @@ describe User, type: :model do
       end
     end
 
-    context '#total_states' do
+    context '#total_states', :vcr do
       it "returns the total number of states a user's trips have visited" do
         expect(@user.total_states).to eq(5)
       end

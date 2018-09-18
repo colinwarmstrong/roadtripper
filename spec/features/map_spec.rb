@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'A registered user' do
   context 'visiting /map' do
-    it 'can create a trip by filling in the required fields' do
+    it 'can create a trip by filling in the required fields', :vcr do
       user = User.create!(provider: "google_oauth2",
                           uid: "112748035832796518381",
                           email: "colinwarmstrong@gmail.com",
@@ -29,7 +29,7 @@ describe 'A registered user' do
       expect(user.trips.count).to eq(1)
 
       expect(page).to have_css('.trip-main', count: 1)
-      
+
       within('.trip-main') do
         expect(page).to have_content('Sweet Home Chicago')
         expect(page).to have_content('7 days')

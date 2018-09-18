@@ -24,6 +24,6 @@ class WeatherPresenter
   attr_reader :latitude, :longitude
 
   def weather_info
-    @weather_inf = WeatherService.new(latitude, longitude).get_weather_info
+    @weather_info ||= WeatherService.new(latitude, longitude).get_weather_info
   end
 end
