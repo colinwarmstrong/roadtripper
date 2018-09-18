@@ -5,25 +5,25 @@ class WeatherPresenter
   end
 
   def summary
-    weather_info[:currently][:summary]
+    weather_info[:summary]
   end
 
   def temperature
-    weather_info[:currently][:temperature]
+    weather_info[:temperature]
   end
 
   def humidity
-    weather_info[:currently][:humidity]
+    weather_info[:humidity]
   end
 
   def precipitation
-    weather_info[:currently][:precipProbability]
+    weather_info[:precipProbability]
   end
 
   private
   attr_reader :latitude, :longitude
 
   def weather_info
-    @weather_info ||= WeatherService.new(latitude, longitude).get_weather_info
+    @weather_info ||= WeatherService.new(latitude, longitude).get_weather_info[:currently]
   end
 end

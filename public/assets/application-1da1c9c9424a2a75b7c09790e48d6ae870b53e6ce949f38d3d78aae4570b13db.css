@@ -1,0 +1,830 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*/
+/* line 15, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+body, html {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 21, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+header {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 29, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+footer {
+  margin-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* line 40, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+h3 {
+  margin: 0px;
+}
+
+/* line 44, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 48, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+/* line 57, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.navbar-expand-lg {
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+/* line 66, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.form-block {
+  font-size: 20px;
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 73, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.form-buttons {
+  border-top: 1px solid rgba(160, 175, 186, 0.4);
+  padding-top: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 81, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.footer-link {
+  color: #a0afba;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+}
+
+/* line 88, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* line 102, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.btn-success {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+/* line 109, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.main {
+  height: 95%;
+  display: flex;
+  border-bottom: 1px solid rgba(160, 175, 186, 0.4);
+}
+
+/* line 115, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.left-main {
+  background-color: #445200;
+  background: url(/assets/welcome_road-10589f9cac98447f5d0b8174d32476683182b5713b1b8549192b99a5907e62d1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 130, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.left-main-text {
+  font-size: 72px;
+  text-shadow: 2px 2px #445200;
+}
+
+/* line 135, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.left-main-line {
+  display: flex;
+  align-items: center;
+}
+
+/* line 140, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.icon {
+  padding-right: 35px;
+}
+
+/* line 144, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.follow-your-interests {
+  display: flex;
+}
+
+/* line 148, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.hear-what-people-are-talking-about {
+  display: flex;
+}
+
+/* line 152, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.join-the-conversation {
+  display: flex;
+}
+
+/* line 156, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.right-main {
+  width: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 166, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.right-main-header {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 172, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.right-main-icon {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 178, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.right-main-subheader {
+  margin-top: 25px;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 185, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.create-account-button {
+  width: 400px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #86af49;
+  border: solid 1px #86af49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 196, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.sign-in-button {
+  color: #86af49;
+  margin-top: 25px;
+  width: 400px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: white;
+  border: solid 1px #86af49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 209, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.global-nav {
+  z-index: 1;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* line 222, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.nav-container {
+  height: 100%;
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 229, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.nav-photo {
+  height: 87%;
+}
+
+/* line 233, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.nav-profile-pic {
+  border-radius: 50%;
+  height: 110%;
+  margin-top: 2px;
+}
+
+/* line 239, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.nav-icon {
+  height: 36px;
+}
+
+/* line 243, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.nav-logo {
+  margin-top: 1px;
+  margin-left: 10px;
+  height: 30px;
+}
+
+/* line 249, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.logout-button {
+  font-size: 13px;
+  height: 36px;
+  width: 75px;
+  margin-left: 18px;
+  border-radius: 25px;
+  background-color: #86af49;
+  border: solid 1px #86af49;
+}
+
+/* line 259, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.dashboard-header {
+  background-color: #445200;
+  background: url("dashboard_header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 270, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-show-dashboard-header {
+  height: 150px;
+  overflow: hidden;
+}
+
+/* line 275, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-show-dashboard-header-photo {
+  width: 100%;
+  background-color: #445200;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  display: block;
+  margin-top: -300px;
+}
+
+/* line 286, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.sub-nav {
+  height: 60px;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* line 298, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.info-bar {
+  color: #63717f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* line 305, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-show-info-bar {
+  color: #63717f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* line 312, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-show-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 319, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trips-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 326, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.distance-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 333, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.cities-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 340, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.buddies-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 347, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-count-title {
+  font-size: 14px;
+}
+
+/* line 351, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-count-number {
+  font-size: 20px;
+}
+
+/* line 355, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.create-new-trip-button {
+  color: white;
+  margin-top: 4px;
+  margin-right: 30px;
+  width: 160px;
+  height: 38px;
+  border-radius: 25px;
+  background-color: #86af49;
+  border: solid 1px #86af49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 369, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.edit-profile-button {
+  color: #86af49;
+  margin-top: 4px;
+  margin-right: 30px;
+  width: 160px;
+  height: 38px;
+  border-radius: 25px;
+  background-color: white;
+  border: solid 1px #86af49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 383, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.profile-section {
+  margin-left: 50px;
+}
+
+/* line 387, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.profile-pic {
+  height: 200px;
+  width: 200px;
+  border: 5px solid white;
+  border-radius: 50%;
+  margin-top: -110px;
+}
+
+/* line 395, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.user-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* line 400, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.user-email {
+  font-size: 15px;
+  color: #73828f;
+}
+
+/* line 405, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.user-location {
+  font-size: 15px;
+  color: #73828f;
+}
+
+/* line 410, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.user-joined {
+  font-size: 15px;
+  color: #73828f;
+}
+
+/* line 415, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.user-photos {
+  font-size: 15px;
+  color: #73828f;
+}
+
+/* line 420, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.photo-grid {
+  margin-left: -8px;
+  margin-top: 2px;
+  width: 264px;
+  max-height: 178px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 430, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.grid-photo {
+  border-radius: 4px;
+  height: 80px;
+  width: 80px;
+  margin: 4px;
+}
+
+/* line 437, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.email-icon {
+  margin-right: 9px;
+}
+
+/* line 441, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.location-icon {
+  margin-right: 12px;
+}
+
+/* line 445, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.calendar-icon {
+  margin-right: 10px;
+}
+
+/* line 449, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.photo-icon {
+  margin-right: 10px;
+}
+
+/* line 453, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.dashboard-main {
+  background-color: #e7ecf0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 461, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-show-main {
+  text-align: center;
+  height: 100%;
+  background-color: #e7ecf0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* line 469, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-show-main-section {
+  height: 90%;
+  width: 95%;
+}
+
+/* line 474, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-main {
+  margin: 10px;
+  width: 430px;
+  height: 330px;
+  border: 1px solid #e7e7e7;
+  border-radius: 6px;
+  padding: 15px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  background-color: none;
+}
+
+/* line 487, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-show-main-article {
+  height: 92.8%;
+  width: 95%;
+  margin: 10px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+/* line 495, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-show-main-map {
+  margin: 10px;
+  margin-bottom: 20px;
+  height: 45%;
+  width: 95%;
+  background-color: white;
+  border-radius: 15px;
+}
+
+/* line 504, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-show-main-weather {
+  margin: 10px;
+  height: 45%;
+  width: 95%;
+  background-color: white;
+  border-radius: 15px;
+}
+
+/* line 512, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-main:hover {
+  box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}
+
+/* line 517, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-main-first {
+  margin: 10px;
+  width: 430px;
+  height: 330px;
+  background-color: #e7ecf0;
+}
+
+/* line 524, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-link {
+  text-decoration: none;
+}
+
+/* line 528, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-header {
+  margin-bottom: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* line 537, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-images-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 544, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-grid-photo {
+  border-radius: 3px;
+  margin: 5px;
+  height: 100px;
+  width: 160px;
+}
+
+/* line 551, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-stats {
+  margin-top: 12px;
+  color: #63717f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* line 559, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-stats-icon {
+  margin-right: 5px;
+}
+
+/* line 563, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.mapboxgl-ctrl-top-right {
+  margin-top: 75px;
+}
+
+/* line 567, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.mapboxgl-ctrl-top-left {
+  margin-top: 75px;
+}
+
+/* line 571, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.mapbox-directions-clearfix {
+  height: 30px;
+}
+
+/* line 575, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.mapboxgl-map {
+  z-index: 0;
+}
+
+/* line 579, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.create-trip-form {
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  margin-top: 34px;
+  margin-left: 327px;
+  width: 250px;
+}
+
+/* line 589, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.create-trip-button {
+  width: 250px;
+  border-radius: 25px;
+  background-color: #86af49;
+  border: solid 1px #86af49;
+  margin-top: 5px;
+}
+
+/* line 597, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.create-trip-days {
+  width: 250px;
+}
+
+/* line 601, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.create-trip-buddies {
+  width: 250px;
+}
+
+/* line 605, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.nav-trip-title {
+  margin-bottom: 0px;
+}
+
+/* line 609, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-show-trip-title {
+  color: #63717f;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 618, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.trip-main-header {
+  padding-bottom: 6px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid rgba(99, 113, 127, 0.3);
+}
+
+/* line 624, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.weather-info-section {
+  width: 25%;
+  overflow-wrap: normal;
+}
+
+/* line 629, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.map-photo {
+  margin-top: 13px;
+  height: 85%;
+  width: 85%;
+}
+
+/* line 635, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.start-location-weather {
+  border-bottom: 1px solid rgba(99, 113, 127, 0.3);
+  height: 43%;
+}
+
+/* line 640, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.end-location-weather {
+  height: 45%;
+}
+
+/* line 644, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.weather-info {
+  padding: 15px;
+  margin-top: -4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 651, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.lodging-info {
+  height: 100%;
+}
+
+/* line 655, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.lodging-info-section {
+  height: 18.1%;
+  border-bottom: 1px solid rgba(99, 113, 127, 0.3);
+  padding-top: 5px;
+}
+
+/* line 661, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.activity-info {
+  height: 100%;
+}
+
+/* line 665, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.activity-info-section {
+  height: 18.1%;
+  border-bottom: 1px solid rgba(99, 113, 127, 0.3);
+  padding-top: 5px;
+}
+
+/* line 671, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.hotel-name {
+  margin-bottom: 16px;
+}
+
+/* line 675, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+.activity-name {
+  margin-bottom: 16px;
+}
+
+/* line 679, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+#create-trip-title {
+  width: 100%;
+}
+
+/* line 683, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+#right-subheader {
+  font-size: 36px;
+}
+
+/* line 687, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+#join-roadtripper {
+  margin-top: 50px;
+  width: 75%;
+  display: flex;
+}
+
+/* line 693, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+#road-icon {
+  color: #86af49;
+  font-size: 48px;
+}
+
+/* line 698, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+#activities-line {
+  margin-left: 35px;
+}
+
+/* line 702, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+#weather-line {
+  margin-left: 8px;
+}
+
+/* line 706, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+#lodging-line {
+  margin-right: 5px;
+}
+
+/* line 710, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+#mini-map {
+  height: 90%;
+  width: 90%;
+}
+
+/* line 715, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+#weather-summary {
+  text-wrap: normal;
+  word-break: break-all;
+}
+
+/* line 720, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+#hotel-4 {
+  height: 18.15%;
+  border-bottom: 0px;
+}
+
+/* line 725, /Users/colinarmstrong/Turing/mod3/roadtripper/app/assets/stylesheets/application.scss.erb */
+#activity-4 {
+  height: 18.15%;
+  border-bottom: 0px;
+}

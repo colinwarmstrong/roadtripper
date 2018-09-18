@@ -41,12 +41,10 @@ class TripsController < ApplicationController
   end
 
   def start_location
-    results = Geocoder.search(params[:start_location])
-    results.first.coordinates
+    @start_location ||= Geocoder.search(params[:start_location]).first.coordinates
   end
 
   def end_location
-    results = Geocoder.search(params[:end_location])
-    results.first.coordinates
+    @end_location ||= Geocoder.search(params[:end_location]).first.coordinates
   end
 end
