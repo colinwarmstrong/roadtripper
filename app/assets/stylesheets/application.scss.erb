@@ -498,6 +498,10 @@ a:hover {
   width: 95%;
   background-color: white;
   border-radius: 15px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .trip-show-main-weather {
@@ -615,6 +619,7 @@ a:hover {
 }
 
 .trip-main-header {
+  width: 100%;
   padding-bottom: 6px;
   margin-bottom: 0px;
   border-bottom: 1px solid rgba(99, 113, 127, 0.3);
@@ -671,6 +676,12 @@ a:hover {
   margin-bottom: 16px;
 }
 
+.hotel-address {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .activity-name {
   margin-bottom: 16px;
 }
@@ -707,8 +718,11 @@ a:hover {
 }
 
 #mini-map {
-  height: 90%;
-  width: 90%;
+  text-align: left;
+  z-index: 100;
+  height: 85.5%;
+  width: 100%;
+  border-radius: 0px 0px 15px 15px;
 }
 
 #weather-summary {
