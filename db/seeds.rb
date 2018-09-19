@@ -7,7 +7,7 @@ user = User.create!(provider: "google_oauth2",
                     token: ENV['USER_TOKEN'],
                     )
 
-trip_1 = user.trips.create!(title: 'Cali Bros: A West Coast Adventure',
+trip_1 = user.trips.create!(title: "Surf's Up: A West Coast Adventure",
                    days: 6,
                    distance: 384,
                    buddies: 4,

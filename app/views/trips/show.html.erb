@@ -138,6 +138,18 @@
   var endLat  = <%= @trip.end_location.x %>
   var endLong = <%= @trip.end_location.y %>
 
+  let locationsArray;
+  fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${startLong},${startLat};${endLong},${endLat}?access_token=pk.eyJ1IjoiY29saW53YXJtc3Ryb25nIiwiYSI6ImNqbHUyZXR4eDBmOG8za24wcDRweWNjdDYifQ._sImOUxG-2VsDQ9xud_3PA&steps=true`)
+    .then((response) => response.json())
+    .then(function(response) {
+      var routeSteps = response.routes[0].legs[0].steps;
+      locationsArray = routeSteps.map((step, index) => {
+        console.log(locationsArray)
+        return ( step.maneuver.location );
+      })
+    })
+    .catch((error) => console.error({ error }))
+
   mapboxgl.accessToken = 'pk.eyJ1IjoiY29saW53YXJtc3Ryb25nIiwiYSI6ImNqbHUyZXR4eDBmOG8za24wcDRweWNjdDYifQ._sImOUxG-2VsDQ9xud_3PA';
   var map = new mapboxgl.Map({
       container: 'mini-map',
@@ -171,10 +183,7 @@
                   "properties": {},
                   "geometry": {
                       "type": "LineString",
-                      "coordinates": [
-                          [startLong, startLat],
-                          [endLong, endLat]
-                      ]
+                      "coordinates": locationsArray
                   }
               }
           },
@@ -183,8 +192,8 @@
               "line-cap": "round"
           },
           "paint": {
-              "line-color": "#888",
-              "line-width": 6
+              "line-color": "#8ead2f",
+              "line-width": 3
           }
       });
   });
