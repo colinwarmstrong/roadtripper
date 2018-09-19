@@ -22,3 +22,5 @@
 /config/application.yml
 
 coverage
+
+public/assets/**
