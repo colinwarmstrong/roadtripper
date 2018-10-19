@@ -1,24 +1,77 @@
-# README
+# RoadTripper
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+[RoadTripper](https://roadtripper1.herokuapp.com/) is a web application built to allow users to plan, coordinate, and document cross country road trips.  The application pulls in data and service from multiple APIs including MapBox, Dark Skies, Google Places, and TicketMaster.  Authorization is provided via Google OAuth.
 
-* Ruby version
+![screenshot](https://i.imgur.com/lRYM7gE.jpg)
 
-* System dependencies
 
-* Configuration
+## Getting Started
 
-* Database creation
+These instructions will get a copy of the project up and running on your local machine for development and testing purposes.
 
-* Database initialization
+### Prerequisites
 
-* How to run the test suite
+You will need access to a terminal application and a text editor.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Installing
 
-* Deployment instructions
+From your terminal, clone the repository to your local machine:
 
-* ...
+```
+git clone https://github.com/colinwarmstrong/roadtripper.git
+```
+
+Change into the directory:
+
+```
+cd roadtripper
+```
+
+Install and update gems:
+
+```
+bundle install
+bundle update
+```
+
+Setup the database:
+
+```
+rake db:{drop,create,migrate,seed}
+```
+
+The repository is now setup on your local machine. To run a local version of the repository, first spin up a local Rails server:
+
+```
+rails s
+```
+
+Once the server is up and running, visit [http://localhost:3000](http://localhost:3000) to view the application locally.
+
+
+## Running the tests
+
+The test suite is built using RSpec.  To run the test suite after you have set up the repository locally, run `bundle exec rspec` from the command line.
+
+
+## Deployment
+
+RoadTripper is deployed through [Heroku](https://www.heroku.com/) and hosted at [https://roadtripper1.herokuapp.com/](https://roadtripper1.herokuapp.com/).
+
+## Built With
+
+* [Rails 5.1.6](https://rubyonrails.org/) - Ruby based web framework
+* [Postgres 1.1.3](https://www.postgresql.org/) - Relational SQL Database
+
+## Author
+
+* **Colin Armstrong**  
+ 	- [GitHub](https://github.com/colinwarmstrong)
+ 	- [LinkedIn](https://www.linkedin.com/in/colinwarmstrong/)
+ 	- [Twitter](https://twitter.com/colinarms93)
+
+
+## Contributing
+
+If you would like to contribute, you can email the author at colinwarmstrong@gmail.com.
