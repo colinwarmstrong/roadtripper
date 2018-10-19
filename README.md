@@ -1,7 +1,7 @@
 # RoadTripper
 
 
-[RoadTripper](https://roadtripper1.herokuapp.com/) is a web application built to allow users to plan, coordinate, and document cross country road trips.  The application pulls in data and service from multiple APIs including MapBox, Dark Skies, Google Places, and TicketMaster.  Authorization is provided via Google OAuth.
+[RoadTripper](https://roadtripper1.herokuapp.com/) is a web application built to allow users to plan, coordinate, and document cross country road trips.  The application pulls in data and services from multiple APIs including MapBox, Dark Skies, Google Places, and TicketMaster.  Authorization is provided via Google OAuth.
 
 ![screenshot](https://i.imgur.com/lRYM7gE.jpg)
 
