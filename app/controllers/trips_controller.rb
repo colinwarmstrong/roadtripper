@@ -13,6 +13,20 @@ class TripsController < ApplicationController
     redirect_to dashboard_path
   end
 
+  def edit
+    @current_trip = Trip.find(params[:id])
+  end
+
+  def update
+    trip = Trip.find(params[:id])
+    trip.update(trip_params)
+    if trip
+      redirect_to dashboard_path
+    else
+      render json: { message: 'Invalid alterations made to trip' }, status: 404
+    end
+  end
+
   private
 
   def trip_params
@@ -41,10 +55,12 @@ class TripsController < ApplicationController
   end
 
   def start_location
+    binding.pry
     @start_location ||= Geocoder.search(params[:start_location]).first.coordinates
   end
 
   def end_location
     @end_location ||= Geocoder.search(params[:end_location]).first.coordinates
   end
+
 end
