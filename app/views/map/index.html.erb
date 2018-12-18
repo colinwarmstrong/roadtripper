@@ -49,7 +49,7 @@
   </script>
 
   <script type="text/javascript">
-    $('.btn.btn-success.create-trip-button').on('click', function() {
+    .on('click', function() {
       let startDestination = $('span.geocoder-icon.geocoder-icon-search').siblings('input')[0].value;
       let endDestination   = $('span.geocoder-icon.geocoder-icon-search').siblings('input')[1].value;
       let tripDistance     = $('div.mapbox-directions-component.mapbox-directions-route-summary').children('h1').text();

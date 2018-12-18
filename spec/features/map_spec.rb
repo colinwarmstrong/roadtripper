@@ -19,6 +19,7 @@ describe 'A registered user' do
       first('#start_location', visible: false).set('Denver, Colorado, United States')
       first('#end_location', visible: false).set('Chicago, Illinois, United States')
       first('#trip_distance', visible: false).set('1003mi')
+
       fill_in :trip_title, with: 'Sweet Home Chicago'
       fill_in :trip_days, with: '7'
       fill_in :trip_buddies, with: '4'
